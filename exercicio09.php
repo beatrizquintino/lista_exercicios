@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 05 - Números amigos</title>
+    <title>Exercicio 09 - Soma dos números</title>
 </head>
 
 <body>
@@ -25,28 +25,18 @@
             $numero2 = $_POST['numero2'];
             $soma1 = 0;
             $soma2 = 0;
+            $somaTotal = 0;
 
-            for ($i = 1; $i < $numero1; $i++) { // divisores do número 1
-                if ($numero1 % $i == 0) {
-                    $soma1 += $i;
-                }
+            for ($i = 1; $i <= $numero1; $i++) {
+                $soma1 += $i;
             }
 
-            for ($i = 1; $i < $numero2; $i++) { // divisores do número 2
-                if ($numero2 % $i == 0) {
-                    $soma2 += $i;
-                }
+            for ($i = 1; $i <= $numero2; $i++) {
+                $soma2 += $i;
             }
 
-            if ($soma1 == $numero2 && $soma2 == $numero1) {
-                echo "$numero1 e $numero2 são números amigos";
-            } else {
-                echo "$numero1 e $numero2 não são números amigos.";
-            }
+            $somaTotal = $soma1 + $soma2;
+            echo "A soma do intervalo de 1 a $numero1 e 1 a $numero2 é: $somaTotal";
         }
     }
     ?>
-
-</body>
-
-</html>

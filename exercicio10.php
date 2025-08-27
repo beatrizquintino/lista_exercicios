@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 06 - Divisores</title>
+    <title>Exercicio 10 - Sequência de Fibonacci</title>
 </head>
 
 <body>
@@ -15,20 +15,7 @@
     </form>
 
     <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_POST['enviar'])) {
-            $numero = $_POST['numero'];
-
-            echo "Os divisores de $numero são:<br>";
-
-            for ($i = 1; $i <= $numero; $i++) {
-                if ($numero % $i == 0) {
-                    echo $i . "<br>";
-                }
-            }
-        }
-    }
+    //AJUDA
     ?>
 </body>
-
 </html>
